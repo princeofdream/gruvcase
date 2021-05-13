@@ -1,8 +1,8 @@
 " -----------------------------------------------------------------------------
-" File: gruvbox.vim
+" File: gruvcase.vim
 " Description: Retro groove color scheme for Vim
 " Author: morhetz <morhetz@gmail.com>
-" Source: https://github.com/morhetz/gruvbox
+" Source: https://github.com/princeofdream/gruvcase
 " Last Modified: 12 Aug 2017
 " -----------------------------------------------------------------------------
 
@@ -16,7 +16,7 @@ if version > 580
   endif
 endif
 
-let g:colors_name='gruvbox'
+let g:colors_name='gruvcase'
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 256
   finish
@@ -25,56 +25,56 @@ endif
 " }}}
 " Global Settings: {{{
 
-if !exists('g:gruvbox_bold')
-  let g:gruvbox_bold=1
+if !exists('g:gruvcase_bold')
+  let g:gruvcase_bold=1
 endif
-if !exists('g:gruvbox_italic')
+if !exists('g:gruvcase_italic')
   if has('gui_running') || $TERM_ITALICS == 'true'
-    let g:gruvbox_italic=1
+    let g:gruvcase_italic=1
   else
-    let g:gruvbox_italic=0
+    let g:gruvcase_italic=0
   endif
 endif
-if !exists('g:gruvbox_undercurl')
-  let g:gruvbox_undercurl=1
+if !exists('g:gruvcase_undercurl')
+  let g:gruvcase_undercurl=1
 endif
-if !exists('g:gruvbox_underline')
-  let g:gruvbox_underline=1
+if !exists('g:gruvcase_underline')
+  let g:gruvcase_underline=1
 endif
-if !exists('g:gruvbox_inverse')
-  let g:gruvbox_inverse=1
-endif
-
-if !exists('g:gruvbox_guisp_fallback') || index(['fg', 'bg'], g:gruvbox_guisp_fallback) == -1
-  let g:gruvbox_guisp_fallback='NONE'
+if !exists('g:gruvcase_inverse')
+  let g:gruvcase_inverse=1
 endif
 
-if !exists('g:gruvbox_improved_strings')
-  let g:gruvbox_improved_strings=0
+if !exists('g:gruvcase_guisp_fallback') || index(['fg', 'bg'], g:gruvcase_guisp_fallback) == -1
+  let g:gruvcase_guisp_fallback='NONE'
 endif
 
-if !exists('g:gruvbox_improved_warnings')
-  let g:gruvbox_improved_warnings=0
+if !exists('g:gruvcase_improved_strings')
+  let g:gruvcase_improved_strings=0
 endif
 
-if !exists('g:gruvbox_termcolors')
-  let g:gruvbox_termcolors=256
+if !exists('g:gruvcase_improved_warnings')
+  let g:gruvcase_improved_warnings=0
 endif
 
-if !exists('g:gruvbox_invert_indent_guides')
-  let g:gruvbox_invert_indent_guides=0
+if !exists('g:gruvcase_termcolors')
+  let g:gruvcase_termcolors=256
 endif
 
-if exists('g:gruvbox_contrast')
-  echo 'g:gruvbox_contrast is deprecated; use g:gruvbox_contrast_light and g:gruvbox_contrast_dark instead'
+if !exists('g:gruvcase_invert_indent_guides')
+  let g:gruvcase_invert_indent_guides=0
 endif
 
-if !exists('g:gruvbox_contrast_dark')
-  let g:gruvbox_contrast_dark='medium'
+if exists('g:gruvcase_contrast')
+  echo 'g:gruvcase_contrast is deprecated; use g:gruvcase_contrast_light and g:gruvcase_contrast_dark instead'
 endif
 
-if !exists('g:gruvbox_contrast_light')
-  let g:gruvbox_contrast_light='medium'
+if !exists('g:gruvcase_contrast_dark')
+  let g:gruvcase_contrast_dark='medium'
+endif
+
+if !exists('g:gruvcase_contrast_light')
+  let g:gruvcase_contrast_light='medium'
 endif
 
 let s:is_dark=(&background == 'dark')
@@ -135,27 +135,27 @@ let s:gb.faded_orange   = ['#af3a03', 130]     " 175-58-3
 " Setup Emphasis: {{{
 
 let s:bold = 'bold,'
-if g:gruvbox_bold == 0
+if g:gruvcase_bold == 0
   let s:bold = ''
 endif
 
 let s:italic = 'italic,'
-if g:gruvbox_italic == 0
+if g:gruvcase_italic == 0
   let s:italic = ''
 endif
 
 let s:underline = 'underline,'
-if g:gruvbox_underline == 0
+if g:gruvcase_underline == 0
   let s:underline = ''
 endif
 
 let s:undercurl = 'undercurl,'
-if g:gruvbox_undercurl == 0
+if g:gruvcase_undercurl == 0
   let s:undercurl = ''
 endif
 
 let s:inverse = 'inverse,'
-if g:gruvbox_inverse == 0
+if g:gruvcase_inverse == 0
   let s:inverse = ''
 endif
 
@@ -169,9 +169,9 @@ let s:none = ['NONE', 'NONE']
 " determine relative colors
 if s:is_dark
   let s:bg0  = s:gb.dark0
-  if g:gruvbox_contrast_dark == 'soft'
+  if g:gruvcase_contrast_dark == 'soft'
     let s:bg0  = s:gb.dark0_soft
-  elseif g:gruvbox_contrast_dark == 'hard'
+  elseif g:gruvcase_contrast_dark == 'hard'
     let s:bg0  = s:gb.dark0_hard
   endif
 
@@ -199,9 +199,9 @@ if s:is_dark
   let s:orange = s:gb.bright_orange
 else
   let s:bg0  = s:gb.light0
-  if g:gruvbox_contrast_light == 'soft'
+  if g:gruvcase_contrast_light == 'soft'
     let s:bg0  = s:gb.light0_soft
-  elseif g:gruvbox_contrast_light == 'hard'
+  elseif g:gruvcase_contrast_light == 'hard'
     let s:bg0  = s:gb.light0_hard
   endif
 
@@ -230,7 +230,7 @@ else
 endif
 
 " reset to 16 colors fallback
-if g:gruvbox_termcolors == 16
+if g:gruvcase_termcolors == 16
   let s:bg0[1]    = 0
   let s:fg4[1]    = 7
   let s:gray[1]   = 8
@@ -301,13 +301,13 @@ endif
 " Overload Setting: {{{
 
 let s:hls_cursor = s:orange
-if exists('g:gruvbox_hls_cursor')
-  let s:hls_cursor = get(s:gb, g:gruvbox_hls_cursor)
+if exists('g:gruvcase_hls_cursor')
+  let s:hls_cursor = get(s:gb, g:gruvcase_hls_cursor)
 endif
 
 let s:number_column = s:none
-if exists('g:gruvbox_number_column')
-  let s:number_column = get(s:gb, g:gruvbox_number_column)
+if exists('g:gruvcase_number_column')
+  let s:number_column = get(s:gb, g:gruvcase_number_column)
 endif
 
 let s:sign_column = s:bg1
@@ -318,52 +318,52 @@ if exists('g:gitgutter_override_sign_column_highlight') &&
 else
   let g:gitgutter_override_sign_column_highlight = 0
 
-  if exists('g:gruvbox_sign_column')
-    let s:sign_column = get(s:gb, g:gruvbox_sign_column)
+  if exists('g:gruvcase_sign_column')
+    let s:sign_column = get(s:gb, g:gruvcase_sign_column)
   endif
 endif
 
 let s:color_column = s:bg1
-if exists('g:gruvbox_color_column')
-  let s:color_column = get(s:gb, g:gruvbox_color_column)
+if exists('g:gruvcase_color_column')
+  let s:color_column = get(s:gb, g:gruvcase_color_column)
 endif
 
 let s:vert_split = s:bg0
-if exists('g:gruvbox_vert_split')
-  let s:vert_split = get(s:gb, g:gruvbox_vert_split)
+if exists('g:gruvcase_vert_split')
+  let s:vert_split = get(s:gb, g:gruvcase_vert_split)
 endif
 
 let s:invert_signs = ''
-if exists('g:gruvbox_invert_signs')
-  if g:gruvbox_invert_signs == 1
+if exists('g:gruvcase_invert_signs')
+  if g:gruvcase_invert_signs == 1
     let s:invert_signs = s:inverse
   endif
 endif
 
 let s:invert_selection = s:inverse
-if exists('g:gruvbox_invert_selection')
-  if g:gruvbox_invert_selection == 0
+if exists('g:gruvcase_invert_selection')
+  if g:gruvcase_invert_selection == 0
     let s:invert_selection = ''
   endif
 endif
 
 let s:invert_tabline = ''
-if exists('g:gruvbox_invert_tabline')
-  if g:gruvbox_invert_tabline == 1
+if exists('g:gruvcase_invert_tabline')
+  if g:gruvcase_invert_tabline == 1
     let s:invert_tabline = s:inverse
   endif
 endif
 
 let s:italicize_comments = s:italic
-if exists('g:gruvbox_italicize_comments')
-  if g:gruvbox_italicize_comments == 0
+if exists('g:gruvcase_italicize_comments')
+  if g:gruvcase_italicize_comments == 0
     let s:italicize_comments = ''
   endif
 endif
 
 let s:italicize_strings = ''
-if exists('g:gruvbox_italicize_strings')
-  if g:gruvbox_italicize_strings == 1
+if exists('g:gruvcase_italicize_strings')
+  if g:gruvcase_italicize_strings == 1
     let s:italicize_strings = s:italic
   endif
 endif
@@ -393,12 +393,12 @@ function! s:HL(group, fg, ...)
 
   " special fallback
   if a:0 >= 3
-    if g:gruvbox_guisp_fallback != 'NONE'
+    if g:gruvcase_guisp_fallback != 'NONE'
       let fg = a:3
     endif
 
     " bg fallback mode should invert higlighting
-    if g:gruvbox_guisp_fallback == 'bg'
+    if g:gruvcase_guisp_fallback == 'bg'
       let emstr .= 'inverse,'
     endif
   endif
@@ -466,7 +466,7 @@ call s:HL('Normal', s:fg1, s:bg0)
 
 " Correct background (see issue #7):
 " --- Problem with changing between dark and light on 256 color terminal
-" --- https://github.com/morhetz/gruvbox/issues/7
+" --- https://github.com/princeofdream/gruvcase/issues/7
 if s:is_dark
   set background=dark
 else
@@ -567,7 +567,7 @@ hi! link lCursor Cursor
 " }}}
 " Syntax Highlighting: {{{
 
-if g:gruvbox_improved_strings == 0
+if g:gruvcase_improved_strings == 0
   hi! link Special GruvboxOrange
 else
   call s:HL('Special', s:orange, s:bg1, s:italicize_strings)
@@ -613,7 +613,7 @@ hi! link Constant GruvboxPurple
 " Character constant: 'c', '/n'
 hi! link Character GruvboxPurple
 " String constant: "this is a string"
-if g:gruvbox_improved_strings == 0
+if g:gruvcase_improved_strings == 0
   call s:HL('String',  s:green, s:none, s:italicize_strings)
 else
   call s:HL('String',  s:fg1, s:bg1, s:italicize_strings)
@@ -665,7 +665,7 @@ call s:HL('DiffText',   s:yellow, s:bg0, s:inverse)
 
 if has("spell")
   " Not capitalised word, or compile warnings
-  if g:gruvbox_improved_warnings == 0
+  if g:gruvcase_improved_warnings == 0
     call s:HL('SpellCap',   s:none, s:none, s:undercurl, s:red)
   else
     call s:HL('SpellCap',   s:green, s:none, s:bold . s:italic)
@@ -700,7 +700,7 @@ if !exists('g:indent_guides_auto_colors')
 endif
 
 if g:indent_guides_auto_colors == 0
-  if g:gruvbox_invert_indent_guides == 0
+  if g:gruvcase_invert_indent_guides == 0
     call s:HL('IndentGuidesOdd', s:vim_bg, s:bg2)
     call s:HL('IndentGuidesEven', s:vim_bg, s:bg1)
   else
