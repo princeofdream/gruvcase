@@ -111,9 +111,9 @@ let s:gb.light0      = ['#fbf1c7', 229]     " 253-244-193
 let s:gb.light0_soft = ['#f2e5bc', 228]     " 242-229-188
 "" byJames Change default write font color
 " let s:gb.light1      = ['#ebdbb2', 223]     " 235-219-178
-let s:gb.light1      = ['#abb2bf', 223]     " 235-219-178
+let s:gb.light1      = ['#abb2bf', 248]     " 235-219-178
 let s:gb.light2      = ['#d5c4a1', 250]     " 213-196-161
-let s:gb.light3      = ['#bdae93', 248]     " 189-174-147
+let s:gb.light3      = ['#bdae93', 249]     " 189-174-147
 let s:gb.light4      = ['#a89984', 246]     " 168-153-132
 let s:gb.light4_256  = ['#a89984', 246]     " 168-153-132
 
