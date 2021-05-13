@@ -1448,10 +1448,21 @@ hi! link haskellChar GruvboxGreen
 " }}}
 " Json: {{{
 
-hi! link jsonKeyword GruvboxGreen
-hi! link jsonQuote GruvboxGreen
-hi! link jsonBraces GruvboxFg1
-hi! link jsonString GruvboxFg1
+hi! link jsonQuote GruvboxLightBlue
+hi! link jsonString GruvboxLightGreen
+hi! link jsonBraces GruvboxGray
+hi! link jsonBoolean GruvboxLightRed
+hi! link jsonNumber GruvboxLightAqua
+
+hi! link jsonKeyword GruvboxLightPurple
+
+" hi! link jsonTrailingCommaError GruvboxYellow
+" hi! link jsonMissingCommaError GruvboxLightRed
+" hi! link jsonNoQuotesError GruvboxLightRed
+" hi! link jsonNumError GruvboxLightRed
+" hi! link jsonStringSQError GruvboxLightRed
+" hi! link jsonSemicolonError GruvboxLightRed
+" hi! link jsonCommentError GruvboxLightRed
 
 " }}}
 
