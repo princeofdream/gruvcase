@@ -90,7 +90,7 @@ let s:gb.dark0_hard  = ['#1d2021', 234]     " 29-32-33
 "" byJames change bg color
 " let s:gb.dark0       = ['#282828', 235]     " 40-40-40
 let s:gb.dark0       = ['#282c34', 235]     " 40-40-40
-let s:gb.dark0_soft  = ['#32302f', 236]     " 50-48-47
+let s:gb.dark0_soft  = ['#262a36', 236]     " 50-48-47
 let s:gb.dark1       = ['#3c3836', 237]     " 60-56-54
 let s:gb.dark2       = ['#504945', 239]     " 80-73-69
 let s:gb.dark3       = ['#665c54', 241]     " 102-92-84
@@ -119,11 +119,11 @@ let s:gb.light4_256  = ['#a89984', 246]     " 168-153-132
 
 "" byJames import light color from theme one
 let s:gb.light_red     = ['#e06c75', 167]     " 251-73-52
-let s:gb.light_green   = ['#98c379', 142]     " 184-187-38
+let s:gb.light_green   = ['#98c379', 108]     " 184-187-38
 let s:gb.light_yellow  = ['#fabd2f', 214]     " 250-189-47
 let s:gb.light_blue    = ['#61afef', 109]     " 131-165-152
 let s:gb.light_purple  = ['#c678dd', 176]     " 211-134-155
-let s:gb.light_aqua    = ['#e5c07b', 108]     " 142-192-124
+let s:gb.light_aqua    = ['#e5c07b', 222]     " 142-192-124
 let s:gb.light_orange  = ['#fe8019', 208]     " 254-128-25
 
 let s:gb.bright_red     = ['#fb4934', 167]     " 251-73-52
@@ -641,7 +641,8 @@ hi! link Keyword GruvboxLightPurple
 "" byJames GruvboxBlue ==> GruvboxLightRed for 1 item
 hi! link Identifier GruvboxLightRed
 " Function name
-hi! link Function GruvboxGreenBold
+"" byJames GruvboxGreenBold ==> GruvboxLightBlueBold for 5 item
+hi! link Function GruvboxLightBlueBold
 
 "" byJames GruvboxAqua ==> GruvboxLightAqua for 5 item
 " Generic preprocessor
@@ -675,7 +676,8 @@ hi! link Number GruvboxPurple
 hi! link Float GruvboxPurple
 
 " Generic type
-hi! link Type GruvboxYellow
+"" byJames GruvboxYellow ==> GruvboxPurple
+hi! link Type GruvboxPurple
 " static, register, volatile, etc
 "" byJames GruvboxOrange ==> GruvboxLightBlue
 " hi! link StorageClass GruvboxOrange
@@ -683,7 +685,8 @@ hi! link StorageClass GruvboxLightBlue
 " struct, union, enum, etc.
 hi! link Structure GruvboxAqua
 " typedef
-hi! link Typedef GruvboxYellow
+"" byJames GruvboxYellow ==> GruvboxPurple
+hi! link Typedef GruvboxPurple
 
 " }}}
 " Completion Menu: {{{
