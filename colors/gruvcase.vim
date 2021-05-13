@@ -87,25 +87,44 @@ let s:gb = {}
 
 " fill it with absolute colors
 let s:gb.dark0_hard  = ['#1d2021', 234]     " 29-32-33
-let s:gb.dark0       = ['#282828', 235]     " 40-40-40
+"" byJames change bg color
+" let s:gb.dark0       = ['#282828', 235]     " 40-40-40
+let s:gb.dark0       = ['#282c34', 235]     " 40-40-40
 let s:gb.dark0_soft  = ['#32302f', 236]     " 50-48-47
 let s:gb.dark1       = ['#3c3836', 237]     " 60-56-54
 let s:gb.dark2       = ['#504945', 239]     " 80-73-69
 let s:gb.dark3       = ['#665c54', 241]     " 102-92-84
-let s:gb.dark4       = ['#7c6f64', 243]     " 124-111-100
-let s:gb.dark4_256   = ['#7c6f64', 243]     " 124-111-100
+"" byJames change side number color
+" let s:gb.dark4       = ['#7c6f64', 243]     " 124-111-100
+" let s:gb.dark4_256   = ['#7c6f64', 243]     " 124-111-100
+let s:gb.dark4       = ['#4b5263', 243]     " 124-111-100
+let s:gb.dark4_256   = ['#4b5263', 243]     " 124-111-100
 
-let s:gb.gray_245    = ['#928374', 245]     " 146-131-116
-let s:gb.gray_244    = ['#928374', 244]     " 146-131-116
+"" byJames change comment color
+" let s:gb.gray_245    = ['#928374', 245]     " 146-131-116
+" let s:gb.gray_244    = ['#928374', 244]     " 146-131-116
+let s:gb.gray_245    = ['#5c6370', 245]     " 146-131-116
+let s:gb.gray_244    = ['#5c6370', 244]     " 146-131-116
 
 let s:gb.light0_hard = ['#f9f5d7', 230]     " 249-245-215
 let s:gb.light0      = ['#fbf1c7', 229]     " 253-244-193
 let s:gb.light0_soft = ['#f2e5bc', 228]     " 242-229-188
-let s:gb.light1      = ['#ebdbb2', 223]     " 235-219-178
+"" byJames Change default write font color
+" let s:gb.light1      = ['#ebdbb2', 223]     " 235-219-178
+let s:gb.light1      = ['#abb2bf', 223]     " 235-219-178
 let s:gb.light2      = ['#d5c4a1', 250]     " 213-196-161
 let s:gb.light3      = ['#bdae93', 248]     " 189-174-147
 let s:gb.light4      = ['#a89984', 246]     " 168-153-132
 let s:gb.light4_256  = ['#a89984', 246]     " 168-153-132
+
+"" byJames import light color from theme one
+let s:gb.light_red     = ['#e06c75', 167]     " 251-73-52
+let s:gb.light_green   = ['#98c379', 142]     " 184-187-38
+let s:gb.light_yellow  = ['#fabd2f', 214]     " 250-189-47
+let s:gb.light_blue    = ['#61afef', 109]     " 131-165-152
+let s:gb.light_purple  = ['#c678dd', 176]     " 211-134-155
+let s:gb.light_aqua    = ['#e5c07b', 108]     " 142-192-124
+let s:gb.light_orange  = ['#fe8019', 208]     " 254-128-25
 
 let s:gb.bright_red     = ['#fb4934', 167]     " 251-73-52
 let s:gb.bright_green   = ['#b8bb26', 142]     " 184-187-38
@@ -197,6 +216,15 @@ if s:is_dark
   let s:purple = s:gb.bright_purple
   let s:aqua   = s:gb.bright_aqua
   let s:orange = s:gb.bright_orange
+
+  "" byJames add light color
+  let s:light_red    = s:gb.light_red
+  let s:light_green  = s:gb.light_green
+  let s:light_yellow = s:gb.light_yellow
+  let s:light_blue   = s:gb.light_blue
+  let s:light_purple = s:gb.light_purple
+  let s:light_aqua   = s:gb.light_aqua
+  let s:light_orange = s:gb.light_orange
 else
   let s:bg0  = s:gb.light0
   if g:gruvbox_contrast_light == 'soft'
@@ -448,6 +476,18 @@ call s:HL('GruvboxAquaBold', s:aqua, s:none, s:bold)
 call s:HL('GruvboxOrange', s:orange)
 call s:HL('GruvboxOrangeBold', s:orange, s:none, s:bold)
 
+"" byJames add default gruvbox light color
+call s:HL('GruvboxLightRed', s:light_red)
+call s:HL('GruvboxLightRedBold', s:light_red, s:none, s:bold)
+call s:HL('GruvboxLightGreen', s:light_green)
+call s:HL('GruvboxLightGreenBold', s:light_green, s:none, s:bold)
+call s:HL('GruvboxLightBlue', s:light_blue)
+call s:HL('GruvboxLightBlueBold', s:light_blue, s:none, s:bold)
+call s:HL('GruvboxLightPurple', s:light_purple)
+call s:HL('GruvboxLightPurpleBold', s:light_purple, s:none, s:bold)
+call s:HL('GruvboxLightAqua', s:light_aqua)
+call s:HL('GruvboxLightAquaBold', s:light_aqua, s:none, s:bold)
+
 call s:HL('GruvboxRedSign', s:red, s:sign_column, s:invert_signs)
 call s:HL('GruvboxGreenSign', s:green, s:sign_column, s:invert_signs)
 call s:HL('GruvboxYellowSign', s:yellow, s:sign_column, s:invert_signs)
@@ -482,7 +522,9 @@ if version >= 700
   " Tab pages line filler
   call s:HL('TabLineFill', s:bg4, s:bg1, s:invert_tabline)
   " Active tab page label
-  call s:HL('TabLineSel', s:green, s:bg1, s:invert_tabline)
+  "" byJames green ==> light_green for 1 item
+  " call s:HL('TabLineSel', s:light_green, s:bg1, s:invert_tabline)
+  call s:HL('TabLineSel', s:light_green, s:bg1, s:invert_tabline)
   " Not active tab page label
   hi! link TabLine TabLineFill
 
@@ -568,7 +610,9 @@ hi! link lCursor Cursor
 " Syntax Highlighting: {{{
 
 if g:gruvbox_improved_strings == 0
-  hi! link Special GruvboxOrange
+  "" byJames GruvboxOrange ==> GruvboxLightBlue for 1 item
+  " hi! link Special GruvboxOrange
+  hi! link Special GruvboxLightBlue
 else
   call s:HL('Special', s:orange, s:bg1, s:italicize_strings)
 endif
@@ -577,36 +621,39 @@ call s:HL('Comment', s:gray, s:none, s:italicize_comments)
 call s:HL('Todo', s:vim_fg, s:vim_bg, s:bold . s:italic)
 call s:HL('Error', s:red, s:vim_bg, s:bold . s:inverse)
 
+"" byJames GruvboxRed ==> GruvboxLightPurple for 6 item
 " Generic statement
-hi! link Statement GruvboxRed
+hi! link Statement GruvboxLightPurple
 " if, then, else, endif, swicth, etc.
-hi! link Conditional GruvboxRed
+hi! link Conditional GruvboxLightPurple
 " for, do, while, etc.
-hi! link Repeat GruvboxRed
+hi! link Repeat GruvboxLightPurple
 " case, default, etc.
-hi! link Label GruvboxRed
+hi! link Label GruvboxLightPurple
 " try, catch, throw
-hi! link Exception GruvboxRed
+hi! link Exception GruvboxLightPurple
 " sizeof, "+", "*", etc.
 hi! link Operator Normal
 " Any other keyword
-hi! link Keyword GruvboxRed
+hi! link Keyword GruvboxLightPurple
 
 " Variable name
-hi! link Identifier GruvboxBlue
+"" byJames GruvboxBlue ==> GruvboxLightRed for 1 item
+hi! link Identifier GruvboxLightRed
 " Function name
 hi! link Function GruvboxGreenBold
 
+"" byJames GruvboxAqua ==> GruvboxLightAqua for 5 item
 " Generic preprocessor
-hi! link PreProc GruvboxAqua
+hi! link PreProc GruvboxLightAqua
 " Preprocessor #include
-hi! link Include GruvboxAqua
+hi! link Include GruvboxLightAqua
 " Preprocessor #define
-hi! link Define GruvboxAqua
+hi! link Define GruvboxLightAqua
 " Same as Define
-hi! link Macro GruvboxAqua
+hi! link Macro GruvboxLightAqua
 " Preprocessor #if, #else, #endif, etc.
-hi! link PreCondit GruvboxAqua
+hi! link PreCondit GruvboxLightAqua
 
 " Generic constant
 hi! link Constant GruvboxPurple
@@ -614,7 +661,9 @@ hi! link Constant GruvboxPurple
 hi! link Character GruvboxPurple
 " String constant: "this is a string"
 if g:gruvbox_improved_strings == 0
-  call s:HL('String',  s:green, s:none, s:italicize_strings)
+  "" byJames green ==> light_green
+  " call s:HL('String',  s:green, s:none, s:italicize_strings)
+  call s:HL('String',  s:light_green, s:none, s:italicize_strings)
 else
   call s:HL('String',  s:fg1, s:bg1, s:italicize_strings)
 endif
@@ -628,7 +677,9 @@ hi! link Float GruvboxPurple
 " Generic type
 hi! link Type GruvboxYellow
 " static, register, volatile, etc
-hi! link StorageClass GruvboxOrange
+"" byJames GruvboxOrange ==> GruvboxLightBlue
+" hi! link StorageClass GruvboxOrange
+hi! link StorageClass GruvboxLightBlue
 " struct, union, enum, etc.
 hi! link Structure GruvboxAqua
 " typedef
