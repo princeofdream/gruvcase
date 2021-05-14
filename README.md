@@ -38,8 +38,66 @@ Palette
 -------
 
 ### Dark mode
-
+ <div style="display:none">
 ![Palette Dark](http://i.imgur.com/wa666xg.png)
+</div>
+<table>
+<tr>
+   <td style="color:#ffffff" bgcolor=#282c34 > 
+    bg 235
+    #282c34</td>
+   <td style="color:#ffffff" bgcolor=#e06c75 >
+   red 167
+   #e06c75</td>
+   <td style="color:#333333" bgcolor=#98c379 >
+   green 108
+   #98c379</td>
+   <td style="color:#333333" bgcolor=#ffd7af >
+   yellow 223
+   #ffd7af</td>
+   <td style="color:#333333" bgcolor=#61afef >
+   blue 75
+   #61afef</td>
+   <td style="color:#333333" bgcolor=#c678dd >
+   purple 176
+   #c678dd</td>
+   <td style="color:#333333" bgcolor=#e5c07b >
+   aqua 222
+   #e5c07b</td>
+   <td style="color:#ffffff" bgcolor=#5c6370 >
+   gray 245
+   #5c6370</td>
+</tr>
+<tr>
+   <td style="color:#ffffff" bgcolor=#282c34 > 
+    bg 235
+    #282c34</td>
+   <td style="color:#ffffff" bgcolor=#fb4934 >
+   red 167
+   #fb4934</td>
+   <td style="color:#333333" bgcolor=#b8bb26 >
+   green 142
+   #b8bb26</td>
+   <td style="color:#333333" bgcolor=#fabd2f >
+   yellow 214
+   #fabd2f</td>
+   <td style="color:#333333" bgcolor=#83a598 >
+   blue 109
+   #83a598</td>
+   <td style="color:#333333" bgcolor=#d3869b >
+   purple 175
+   #c678dd</td>
+   <td style="color:#333333" bgcolor=#8ec07c >
+   aqua 108
+   #e5c07b</td>
+   <td style="color:#333333" bgcolor=#abb2bf >
+   fg 248
+   #abb2bf</td>
+</tr>
+
+
+</table>
+
 
 ### Light mode
 
