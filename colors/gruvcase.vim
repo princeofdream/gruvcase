@@ -120,11 +120,12 @@ let s:gb.light4_256  = ['#a89984', 246]     " 168-153-132
 "" byJames import light color from theme one
 let s:gb.light_red     = ['#e06c75', 167]     " 251-73-52
 let s:gb.light_green   = ['#98c379', 108]     " 184-187-38
-let s:gb.light_yellow  = ['#fabd2f', 214]     " 250-189-47
+let s:gb.light_yellow  = ['#ffd7af', 223]     " 250-189-47
 let s:gb.light_blue    = ['#61afef',  75]     " 131-165-152
 let s:gb.light_purple  = ['#c678dd', 176]     " 211-134-155
 let s:gb.light_aqua    = ['#e5c07b', 222]     " 142-192-124
 let s:gb.light_orange  = ['#fe8019', 208]     " 254-128-25
+let s:gb.light_cyan    = ['#87d7ff', 117]     "
 
 let s:gb.bright_red     = ['#fb4934', 167]     " 251-73-52
 let s:gb.bright_green   = ['#b8bb26', 142]     " 184-187-38
@@ -225,6 +226,7 @@ if s:is_dark
   let s:light_purple = s:gb.light_purple
   let s:light_aqua   = s:gb.light_aqua
   let s:light_orange = s:gb.light_orange
+  let s:light_cyan   = s:gb.light_cyan
 else
   let s:bg0  = s:gb.light0
   if g:gruvbox_contrast_light == 'soft'
@@ -483,10 +485,13 @@ call s:HL('GruvboxLightGreen', s:light_green)
 call s:HL('GruvboxLightGreenBold', s:light_green, s:none, s:bold)
 call s:HL('GruvboxLightBlue', s:light_blue)
 call s:HL('GruvboxLightBlueBold', s:light_blue, s:none, s:bold)
+call s:HL('GruvboxLightYellow', s:light_yellow)
+call s:HL('GruvboxLightYellowBold', s:light_yellow, s:none, s:bold)
 call s:HL('GruvboxLightPurple', s:light_purple)
 call s:HL('GruvboxLightPurpleBold', s:light_purple, s:none, s:bold)
 call s:HL('GruvboxLightAqua', s:light_aqua)
 call s:HL('GruvboxLightAquaBold', s:light_aqua, s:none, s:bold)
+call s:HL('GruvboxLightCyan', s:light_cyan)
 
 call s:HL('GruvboxRedSign', s:red, s:sign_column, s:invert_signs)
 call s:HL('GruvboxGreenSign', s:green, s:sign_column, s:invert_signs)
@@ -642,7 +647,7 @@ hi! link Keyword GruvboxLightPurple
 hi! link Identifier GruvboxLightRed
 " Function name
 "" byJames GruvboxGreenBold ==> GruvboxLightBlueBold for 5 item
-hi! link Function GruvboxLightBlueBold
+hi! link Function GruvboxLightBlue
 
 "" byJames GruvboxAqua ==> GruvboxLightAqua for 5 item
 " Generic preprocessor
@@ -676,8 +681,8 @@ hi! link Number GruvboxPurple
 hi! link Float GruvboxPurple
 
 " Generic type
-"" byJames GruvboxYellow ==> GruvboxPurple
-hi! link Type GruvboxPurple
+"" byJames GruvboxYellow ==> GruvboxLightCyan
+hi! link Type GruvboxLightCyan
 " static, register, volatile, etc
 "" byJames GruvboxOrange ==> GruvboxLightBlue
 " hi! link StorageClass GruvboxOrange
