@@ -1,8 +1,8 @@
 <!--p align="center"><img src="http://svgur.com/i/3Dp.svg"></p-->
 
-gruvbox is heavily inspired by [badwolf][], [jellybeans][] and [solarized][].
+gruvcase is heavily inspired by [badwolf][], [jellybeans][] and [solarized][].
 
-Designed as a bright theme with pastel 'retro groove' colors and light/dark mode switching in the way of [solarized][]. The main focus when developing gruvbox is to keep colors easily distinguishable, contrast enough and still pleasant for the eyes.
+Designed as a bright theme with pastel 'retro groove' colors and light/dark mode switching in the way of [solarized][]. The main focus when developing gruvcase is to keep colors easily distinguishable, contrast enough and still pleasant for the eyes.
 
    [badwolf]: https://github.com/sjl/badwolf
    [jellybeans]: https://github.com/nanotech/jellybeans.vim
@@ -11,7 +11,7 @@ Designed as a bright theme with pastel 'retro groove' colors and light/dark mode
 Attention
 ---------
 
-1. [Read this first](https://github.com/morhetz/gruvbox/wiki/Terminal-specific)
+1. [Read this first](https://github.com/morhetz/gruvcase/wiki/Terminal-specific)
 2. Typeface from gallery is [Fantasque Sans Mono](https://github.com/belluzj/fantasque-sans)
 3. Typeface from screenshots below is [Fira Mono](https://mozilla.github.io/Fira/)
 
@@ -20,7 +20,7 @@ Screenshots
 
 Refer [Gallery][] for more syntax-specific screenshots.
 
-   [Gallery]: https://github.com/morhetz/gruvbox/wiki/Gallery
+   [Gallery]: https://github.com/morhetz/gruvcase/wiki/Gallery
 
 ### Dark mode
 
@@ -108,7 +108,7 @@ Contrast options
 
 Refer [wiki section][] for contrast configuration and other options.
 
-   [wiki section]: https://github.com/morhetz/gruvbox/wiki/Configuration#ggruvbox_contrast_dark
+   [wiki section]: https://github.com/morhetz/gruvcase/wiki/Configuration#ggruvcase_contrast_dark
 
 ![Contrast Options](http://i.imgur.com/5MSbe6T.png)
 
@@ -117,7 +117,7 @@ Documentation
 
 Please check [wiki][] for installation details, terminal-specific setup, troubleshooting, configuration options and others.
 
-   [wiki]: https://github.com/morhetz/gruvbox/wiki
+   [wiki]: https://github.com/morhetz/gruvcase/wiki
 
 Features
 --------
@@ -147,9 +147,9 @@ Features
 Contributions
 -------------
 
-See [gruvbox-contrib][] repo for contributions, ports and extras.
+See [gruvcase-contrib][] repo for contributions, ports and extras.
 
-[gruvbox-contrib]: https://github.com/morhetz/gruvbox-contrib
+[gruvcase-contrib]: https://github.com/morhetz/gruvcase-contrib
 
 ToDo
 ----
@@ -160,8 +160,8 @@ ToDo
 Self-Promotion
 --------------
 
-If you like gruvbox follow the repository on
-[GitHub](https://github.com/morhetz/gruvbox) and vote for it on
+If you like gruvcase follow the repository on
+[GitHub](https://github.com/morhetz/gruvcase) and vote for it on
 [vim.org](http://www.vim.org/scripts/script.php?script_id=4349).
 
 License

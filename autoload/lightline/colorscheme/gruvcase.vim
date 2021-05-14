@@ -1,8 +1,8 @@
 " -----------------------------------------------------------------------------
-" File: gruvbox.vim
+" File: gruvcase.vim
 " Description: Gruvbox colorscheme for Lightline (itchyny/lightline.vim)
 " Author: gmoe <me@griffinmoe.com>
-" Source: https://github.com/morhetz/gruvbox
+" Source: https://github.com/morhetz/gruvcase
 " Last Modified: 20 Sep 2017
 " -----------------------------------------------------------------------------
 
@@ -53,5 +53,5 @@ if exists('g:lightline')
   let s:p.normal.error = [ [ s:bg0, s:orange ] ]
   let s:p.normal.warning = [ [ s:bg2, s:yellow ] ]
 
-  let g:lightline#colorscheme#gruvbox#palette = lightline#colorscheme#flatten(s:p)
+  let g:lightline#colorscheme#gruvcase#palette = lightline#colorscheme#flatten(s:p)
 endif
