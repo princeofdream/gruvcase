@@ -682,7 +682,7 @@ hi! link Float GruvboxPurple
 
 " Generic type
 "" byJames GruvboxYellow ==> GruvboxLightCyan
-hi! link Type GruvboxLightCyan
+hi! link Type GruvboxLightYellow
 " static, register, volatile, etc
 "" byJames GruvboxOrange ==> GruvboxLightBlue
 " hi! link StorageClass GruvboxOrange
