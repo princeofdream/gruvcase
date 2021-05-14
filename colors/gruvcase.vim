@@ -340,7 +340,8 @@ if exists('g:gruvcase_number_column')
   let s:number_column = get(s:gb, g:gruvcase_number_column)
 endif
 
-let s:sign_column = s:bg1
+"" byJames change default colum line bg
+let s:sign_column = s:bg0
 
 if exists('g:gitgutter_override_sign_column_highlight') &&
       \ g:gitgutter_override_sign_column_highlight == 1
